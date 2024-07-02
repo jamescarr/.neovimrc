@@ -23,6 +23,14 @@ clean_backups:
 	@echo "Deleting all backup directories"
 	@rm -rf $(BACKUP_PATTERN)
 
+# Display help text
+help:
+	@echo "\nUsage: make [install|backup|copy|clean_backups]\n"
+	@echo "install: Backup existing nvim configuration and copy current directory structure to nvim config directory"
+	@echo "backup: Backup existing nvim configuration"
+	@echo "copy: Copy current directory structure to nvim config directory"
+	@echo "clean_backups: Delete all backup directories"
+
 # Phony targets
-.PHONY: install backup copy clean_backups
+.PHONY: install backup copy clean_backups help
 
