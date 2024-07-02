@@ -3,7 +3,8 @@
 # Variables
 NVIM_CONFIG_DIR = ~/.config/nvim
 BACKUP_DIR = ~/.config/nvim_backup_$(shell date +%Y%m%d%H%M%S)
-BACKUP_PATTERN = ~/.config/.nvim_backup_*
+BACKUP_PATTERN = ~/.config/nvim_backup_*
+
 # Default target
 install: backup copy
 
