@@ -6,7 +6,7 @@ BACKUP_DIR = ~/.config/nvim_backup_$(shell date +%Y%m%d%H%M%S)
 BACKUP_PATTERN = ~/.config/nvim_backup_*
 
 # Default target
-install: backup copy
+install: backup copy lock
 
 # Target to backup the existing nvim configuration
 backup:
@@ -18,6 +18,12 @@ copy:
 	@echo "Copying current directory structure to $(NVIM_CONFIG_DIR)"
 	@mkdir -p $(NVIM_CONFIG_DIR)
 	@rsync -av --exclude='Makefile' ./ $(NVIM_CONFIG_DIR)/
+
+#Target to generate lazy-lock.json
+lock:
+	@echo "Generating lazy-lock.json..."
+	nvim --headless +Lazy! lock +qall
+	@echo "lazy-lock.json generated."
 
 # Target to delete all backup directories
 clean_backups:
