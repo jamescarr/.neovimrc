@@ -42,6 +42,7 @@ return {
                 ["elixirls"] = function()
                     local lspconfig = require("lspconfig")
                     lspconfig.elixirls.setup({
+                        capabilities = capabilities,
                         cmd = { "/opt/homebrew/bin/elixir-ls" },
                     })
                 end,
