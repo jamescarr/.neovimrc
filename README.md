@@ -1,5 +1,6 @@
 # .nvim
-My .nvim RC, based off those created by ThePrimeagen, heavily modified for my needs.
+My NeoVim config, originally based off one created by ThePrimeagen, heavily modified for my needs.
+
 
 ## Usage
 
