@@ -27,6 +27,7 @@ return {
         require("mason-lspconfig").setup({
             ensure_installed = {
                 "lua_ls",
+                "elixirls",
                 "rust_analyzer",
                 "tsserver",
                 "gopls",
@@ -38,6 +39,12 @@ return {
                     }
                 end,
 
+                ["elixirls"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.elixirls.setup({
+                        cmd = { "/opt/homebrew/bin/elixir-ls" },
+                    })
+                end,
                 ["lua_ls"] = function()
                     local lspconfig = require("lspconfig")
                     lspconfig.lua_ls.setup {
