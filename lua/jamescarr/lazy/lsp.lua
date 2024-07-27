@@ -11,6 +11,7 @@ return {
         "L3MON4D3/LuaSnip",
         "saadparwaiz1/cmp_luasnip",
         "j-hui/fidget.nvim",
+        "https://git.sr.ht/~whynothugo/lsp_lines.nvim", -- wrap em
     },
 
     config = function()
@@ -24,6 +25,8 @@ return {
 
         require("fidget").setup({})
         require("mason").setup()
+
+        require("lsp_lines").setup({})
         require("mason-lspconfig").setup({
             ensure_installed = {
                 "lua_ls",
