@@ -3,18 +3,33 @@ return {
 
     tag = "0.1.5",
 
-    defaults = {
-        file_ignore_patterns = {
-            "node_modules",
-            "_build" -- elixir build paths
-        }
-    },
     dependencies = {
         "nvim-lua/plenary.nvim"
     },
 
     config = function()
-        require('telescope').setup({})
+        require('telescope').setup({
+            defaults = {
+                file_ignore_patterns = {
+                  -- Elixir
+                  "_build",
+                  "deps",
+                  -- Node.js
+                  "node_modules",
+                  -- Go
+                  "bin",
+                  "pkg",
+                  -- Python
+                  "__pycache__",
+                  "env",
+                  "venv",
+                  ".venv",
+                  "dist",
+                  "build",
+                  "*.egg-info",
+                }
+            }
+        })
 
         local builtin = require('telescope.builtin')
         vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
