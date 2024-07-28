@@ -3,6 +3,12 @@ return {
 
     tag = "0.1.5",
 
+    defaults = {
+        file_ignore_patterns = {
+            "node_modules",
+            "_build" -- elixir build paths
+        }
+    },
     dependencies = {
         "nvim-lua/plenary.nvim"
     },
@@ -25,6 +31,7 @@ return {
             builtin.grep_string({ search = vim.fn.input("Grep > ") })
         end)
         vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
+
     end
 }
 
