@@ -47,6 +47,8 @@ return {
         end)
         vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
 
+        -- map `gr` (go to reference) to open in telescope!
+        vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<CR>', {noremap=true, silent=true})
     end
 }
 
