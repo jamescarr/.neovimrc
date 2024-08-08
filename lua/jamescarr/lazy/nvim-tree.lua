@@ -6,7 +6,7 @@ return {
     config = function()
         -- load and setup nvim-tree
         require("nvim-tree").setup(
-
+            vim.api.nvim_set_keymap('n', '<leader>f', ':NvimTreeFindFile<CR>', { noremap = true, silent = true })
         )
         -- Automatically open nvim-tree when starting Neovim
         vim.api.nvim_create_autocmd('VimEnter', {
