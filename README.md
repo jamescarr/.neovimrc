@@ -5,9 +5,13 @@ My NeoVim config, originally based off one created by ThePrimeagen, heavily modi
 Some of the shortcuts I have defined.
 
 * `<leader>f` - show current buffer in nvim-tree
-* `<leader>gr` - go to references
-* `<leader>gd` - go to definition
+![](https://cdn.zappy.app/e2c95c8104a1780d538be80e5bd31feb.gif)
 
+* `<leader>gr` - go to references
+![](https://cdn.zappy.app/d79e442b33eff2c6a31cf004bd731249.gif)
+
+* `<leader>gd` - go to definition
+![](https://cdn.zappy.app/5bbc6024df12914bf83e24abb7b03ed0.gif)
 
 ## Usage
 
