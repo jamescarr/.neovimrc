@@ -4,6 +4,8 @@ My NeoVim config, originally based off one created by ThePrimeagen, heavily modi
 ## Cheatsheet
 Some of the shortcuts I have defined.
 
+* `<leader>pf` - fuzzy search file
+![](https://cdn.zappy.app/b045df4eec0295b4d42182e1eab96ec8.gif)
 * `<leader>f` - show current buffer in nvim-tree
 ![](https://cdn.zappy.app/e2c95c8104a1780d538be80e5bd31feb.gif)
 
