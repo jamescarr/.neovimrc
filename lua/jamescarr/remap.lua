@@ -11,6 +11,9 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+-- Refactoring Actions
+vim.keymap.set('n', '<leader>rv', vim.lsp.buf.code_action, { desc = 'Refactor: Extract variable' })
+
 vim.keymap.set("n", "<leader>vwm", function()
     require("vim-with-me").StartVimWithMe()
 end)
