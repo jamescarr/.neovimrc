@@ -27,4 +27,5 @@ clean_backups: Delete all backup directories
 
 ```
 
-
+## Plugins to Consider
+None at this time.

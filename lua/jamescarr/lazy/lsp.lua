@@ -34,6 +34,7 @@ return {
                 "rust_analyzer",
                 "tsserver",
                 "gopls",
+                "pyright"
             },
             handlers = {
                 function(server_name) -- default handler (optional)
@@ -47,6 +48,12 @@ return {
                     lspconfig.elixirls.setup({
                         capabilities = capabilities,
                         cmd = { "/opt/homebrew/bin/elixir-ls" },
+                    })
+                end,
+                ["pyright"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.pyright.setup({
+                        capabilities = capabilities,
                     })
                 end,
                 ["lua_ls"] = function()
