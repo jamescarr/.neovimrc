@@ -1,6 +1,8 @@
 return {
     "tpope/vim-fugitive",
     config = function()
+        vim.g.fugitive_gitlab_domains = {'https://gitlab.com'}
+
         vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 
         local JamesCarr_Fugitive = vim.api.nvim_create_augroup("JamesCarr_Fugitive", {})
