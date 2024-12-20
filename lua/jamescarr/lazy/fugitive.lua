@@ -1,9 +1,7 @@
 -- Global GitLab domain configuration
 vim.g.fugitive_gitlab_domains = { "https://gitlab.com" }
 
--- Define the Fugitive configuration module
 local function fugitive_config()
-    -- General Fugitive keymaps
     vim.keymap.set("n", "<leader>gs", vim.cmd.Git) -- Git status
     vim.keymap.set("n", "gu", "<cmd>diffget //2<CR>") -- Git diffget left
     vim.keymap.set("n", "gh", "<cmd>diffget //3<CR>") -- Git diffget right
@@ -36,12 +34,10 @@ local function fugitive_config()
     })
 end
 
--- Define the Fugitive GitLab plugin configuration
 local function gitlab_config()
     vim.keymap.set("n", "<leader>gb", vim.cmd.GBrowse) -- Open in GitLab
 end
 
--- Plugin specification for Lazy.nvim
 return {
     {
         "tpope/vim-fugitive",
