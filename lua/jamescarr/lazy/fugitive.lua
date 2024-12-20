@@ -1,7 +1,16 @@
+
+vim.g.fugitive_gitlab_domains = {'https://gitlab.com'}
 return {
     "tpope/vim-fugitive",
+    {
+    -- Add the fugitive-gitlab plugin
+        "shumphrey/fugitive-gitlab.vim",
+        config = function()
+            -- Configure the keymap for GBrowse
+            vim.keymap.set("n", "<leader>gb", vim.cmd.GBrowse)
+        end,
+    },
     config = function()
-        vim.g.fugitive_gitlab_domains = {'https://gitlab.com'}
 
         vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 
